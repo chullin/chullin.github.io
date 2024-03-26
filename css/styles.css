@@ -11755,3 +11755,15 @@ html {
       margin: 0 3em; /* 在螢幕寬度小於768px時，將margin設置為較小的值 */
   }
 }
+
+@media (max-width: 576px) {
+  .btn {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .btn {
+    font-size: 0.5rem;
+  }
+}
