@@ -11733,3 +11733,13 @@ html {
     left: -2vw;
   }
 }
+
+#about {
+  text-align: left; margin: 0 15em
+}
+
+@media screen and (max-width: 992px) {
+  #about {
+      margin: 0 3em; /* 在螢幕寬度小於768px時，將margin設置為較小的值 */
+  }
+}
