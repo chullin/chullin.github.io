@@ -613,6 +613,11 @@ progress {
   height: auto;
 }
 
+.img-fluid2 {
+  max-height: 100%;
+  width: auto;
+}
+
 .img-thumbnail {
   padding: 0.25rem;
   background-color: #fff;
@@ -4216,6 +4221,20 @@ textarea.form-control-lg {
   padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
   color: var(--bs-card-color);
 }
+
+@media (max-width: 576px) {
+  .card-body > div {
+      display: flex;
+      flex-direction: column;
+  }
+
+  .card-body > .d-flex > img {
+      width: 100%;
+      margin-bottom: 15px;
+  }
+}
+
+
 
 .card-title {
   margin-bottom: var(--bs-card-title-spacer-y);
@@ -11843,5 +11862,8 @@ html {
     color:#555;
     font-size: 0.7rem;
   }
+}
 
+.img-size{
+  width: 40%;
 }
