@@ -546,6 +546,7 @@ progress {
   }
 }
 
+
 .display-6 {
   font-size: calc(1.375rem + 1.5vw);
   font-weight: 300;
@@ -695,8 +696,8 @@ progress {
   flex-shrink: 0;
   width: 100%;
   max-width: 100%;
-  padding-right: calc(var(--bs-gutter-x) * 0.5);
-  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  padding-right: calc(var(--bs-gutter-x) * 0.3);
+  padding-left: calc(var(--bs-gutter-x) * 0.3);
   margin-top: var(--bs-gutter-y);
 }
 
@@ -7910,6 +7911,10 @@ textarea.form-control-lg {
   padding: 3rem !important;
 }
 
+.p-6 {
+  padding: 1.2rem 2.4rem !important;
+}
+
 .px-0 {
   padding-right: 0 !important;
   padding-left: 0 !important;
@@ -7938,6 +7943,11 @@ textarea.form-control-lg {
 .px-5 {
   padding-right: 3rem !important;
   padding-left: 3rem !important;
+}
+
+.px-17 {
+  padding-right: 1.7rem !important;
+  padding-left: 1.7rem !important;
 }
 
 .py-0 {
@@ -8123,7 +8133,7 @@ textarea.form-control-lg {
 }
 
 .fs-8 {
-  font-size: 0.65rem !important;
+  font-size: 0.73rem !important;
 }
 
 .fst-italic {
@@ -11684,13 +11694,39 @@ html {
   fill: #1e30f3;
 }
 
-@media (min-width: 576px) {
+@media (max-width: 576px) {
   .profile {
-    height: 60vw;
-    width: 60vw;
+    height: 45vw;
+    width: 45vw;
   }
   .profile .profile-img {
-    height: 55vw;
+    height: 35vw;
+  }
+  .profile .dots-1 {
+    width: 3vw;
+    right: 1.5vw;
+  }
+  .profile .dots-2 {
+    width: 3vw;
+    right: -4vw;
+  }
+  .profile .dots-3 {
+    width: 3vw;
+    left: 1.5vw;
+  }
+  .profile .dots-4 {
+    width: 3vw;
+    left: -4vw;
+  }
+}
+
+@media (min-width: 576px) {
+  .profile {
+    height: 40vw;
+    width: 40vw;
+  }
+  .profile .profile-img {
+    height: 32vw;
   }
   .profile .dots-1 {
     width: 3vw;
@@ -11711,11 +11747,11 @@ html {
 }
 @media (min-width: 768px) {
   .profile {
-    height: 50vw;
-    width: 50vw;
+    height: 35vw;
+    width: 35vw;
   }
   .profile .profile-img {
-    height: 40vw;
+    height: 30vw;
   }
   .profile .dots-1 {
     width: 3vw;
@@ -11736,11 +11772,11 @@ html {
 }
 @media (min-width: 992px) {
   .profile {
-    height: 40vw;
-    width: 40vw;
+    height: 35vw;
+    width: 35vw;
   }
   .profile .profile-img {
-    height: 35vw;
+    height: 30vw;
   }
   .profile .dots-1 {
     width: 1.5vw;
@@ -11761,11 +11797,37 @@ html {
 }
 @media (min-width: 1200px) {
   .profile {
-    height: 35vw;
-    width: 35vw;
+    height: 30vw;
+    width: 30vw;
   }
   .profile .profile-img {
-    height: 30vw;
+    height: 25vw;
+  }
+  .profile .dots-1 {
+    width: 1.5vw;
+    right: 0.75vw;
+  }
+  .profile .dots-2 {
+    width: 1.5vw;
+    right: -2vw;
+  }
+  .profile .dots-3 {
+    width: 1.5vw;
+    left: 0.75vw;
+  }
+  .profile .dots-4 {
+    width: 1.5vw;
+    left: -2vw;
+  }
+}
+
+@media (min-width: 1400px) {
+  .profile {
+    height: 20vw;
+    width: 20vw;
+  }
+  .profile .profile-img {
+    height: 16vw;
   }
   .profile .dots-1 {
     width: 1.5vw;
@@ -11815,7 +11877,7 @@ html {
 
 @media (max-width: 360px) {
   .btn {
-    font-size: 0.5rem;
+    font-size: 0.58rem;
   }
 }
 
@@ -11866,4 +11928,8 @@ html {
 
 .img-size{
   width: 40%;
+}
+
+.resume-icon{
+  height: 35px;
 }
