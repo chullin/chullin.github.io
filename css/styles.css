@@ -7616,6 +7616,11 @@ textarea.form-control-lg {
   margin-bottom: 3rem !important;
 }
 
+.my-6 {
+  margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
+}
+
 .my-auto {
   margin-top: auto !important;
   margin-bottom: auto !important;
@@ -11922,7 +11927,7 @@ html {
 @media (max-width: 576px) {
   .font-color-555{
     color:#555;
-    font-size: 0.7rem;
+    font-size: 0.77rem;
   }
 }
 
