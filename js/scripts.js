@@ -7,6 +7,17 @@
 // Use this file to add JavaScript to your project
 
 
+var message = "此網站仍在建置中";
+
+// 檢查當前網頁的 URL
+if (window.location.href.indexOf("chullin.github.io/blog.html") > -1) {
+    // 如果 URL 包含 "chullin.github.io/blog.html"，顯示警告視窗
+    window.onload = function() {
+        alert(message);
+    };
+}
+
+
 var contactLink = document.getElementById('contact-link');
 
 // 添加點擊事件監聽器
