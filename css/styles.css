@@ -8142,8 +8142,15 @@ textarea.form-control-lg {
 }
 
 .fs-8 {
-  font-size: 0.73rem !important;
+  font-size: 0.9rem !important;
 }
+
+/* @media (min-width: 992px) {
+  .fs-8 {
+    font-size: 0.9rem !important;
+  }
+} */
+
 
 .fst-italic {
   font-style: italic !important;
@@ -11654,7 +11661,7 @@ html {
   height: 75vw;
   width: 75vw;
   border-radius: 35px;
-  margin-top: 5vw;
+  /* margin-top: 5vw; */
   max-height: 40rem;
   max-width: 40rem;
 }
@@ -11705,11 +11712,11 @@ html {
 
 @media (max-width: 576px) {
   .profile {
-    height: 45vw;
-    width: 45vw;
+    height: 53vw;
+    width: 53vw;
   }
   .profile .profile-img {
-    height: 35vw;
+    height: 45vw;
   }
   .profile .dots-1 {
     width: 3vw;
@@ -11940,5 +11947,5 @@ html {
 }
 
 .resume-icon{
-  height: 35px;
+  height: 40px;
 }
