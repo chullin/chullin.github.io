@@ -7920,6 +7920,10 @@ textarea.form-control-lg {
   padding: 1.2rem 2.4rem !important;
 }
 
+.p-6-project {
+  padding: 1.2rem !important;
+}
+
 .px-0 {
   padding-right: 0 !important;
   padding-left: 0 !important;
