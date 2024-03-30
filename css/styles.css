@@ -11949,3 +11949,20 @@ html {
 .resume-icon{
   height: 40px;
 }
+
+
+
+
+
+
+/* snake css */
+.game-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+}
+
+canvas {
+  border: 1px solid #000;
+}
