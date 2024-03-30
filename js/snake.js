@@ -1,3 +1,12 @@
+// 在文檔載入完成後自動觸發模擬點擊按鈕
+document.addEventListener("DOMContentLoaded", function(event) {
+  // 觸發按鈕的動作
+  document.getElementById("exampleModal1").click();
+});
+
+
+
+
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
 const gridSize = 20;
