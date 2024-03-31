@@ -7,15 +7,21 @@
 // Use this file to add JavaScript to your project
 
 
-var message = "此網站仍在建置中";
+// var message = "此網站仍在建置中";
 
-// 檢查當前網頁的 URL
-if (window.location.href.indexOf("chullin.github.io/blog.html") > -1) {
-    // 如果 URL 包含 "chullin.github.io/blog.html"，顯示警告視窗
-    window.onload = function() {
-        alert(message);
-    };
-}
+// // 檢查當前網頁的 URL
+// if (window.location.href.indexOf("chullin.github.io/blog.html") > -1) {
+//     // 如果 URL 包含 "chullin.github.io/blog.html"，顯示警告視窗
+//     window.onload = function() {
+//         alert(message);
+//     };
+// }
+
+// 在文檔載入完成後自動觸發模擬點擊按鈕
+document.addEventListener("DOMContentLoaded", function(event) {
+    // 觸發按鈕的動作
+    document.getElementById("exampleModal1").click();
+});
 
 
 var contactLink = document.getElementById('contact-link');
