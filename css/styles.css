@@ -11970,6 +11970,7 @@ canvas {
 
 .post-preview > a {
   color: #212529;
+  text-decoration:none; 
 }
 .post-preview > a:focus, .post-preview > a:hover {
   text-decoration: none;
@@ -12002,10 +12003,13 @@ canvas {
   }
 }
 
-
 .blog-title {
   font-size: 1.5rem;
   margin-top: 0;
   line-height: 1.8;
+  color: #1E30F3;
+}
 
+.blog-title:hover {
+  color: #0085A1;
 }
