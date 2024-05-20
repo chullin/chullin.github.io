@@ -16,12 +16,17 @@ let dx = 0;
 let dy = 0;
 
 function drawSnake() {
-  ctx.fillStyle = "green";
-  snake.forEach(segment => {
+  snake.forEach((segment, index) => {
+    if (index === 0) {
+      // 蛇頭顏色
+      ctx.fillStyle = "blue";
+    } else {
+      // 蛇身顏色
+      ctx.fillStyle = "green";
+    }
     ctx.fillRect(segment.x * gridSize, segment.y * gridSize, gridSize, gridSize);
   });
 }
-
 function drawFood() {
   ctx.fillStyle = "orange";
   ctx.fillRect(food.x * gridSize, food.y * gridSize, gridSize, gridSize);
@@ -56,9 +61,22 @@ function moveSnake() {
 
 
 function generateFood() {
-  food.x = Math.floor(Math.random() * canvas.width / gridSize);
-  food.y = Math.floor(Math.random() * canvas.height / gridSize);
+  let newFoodPosition;
+  while (true) {
+    newFoodPosition = {
+      x: Math.floor(Math.random() * canvas.width / gridSize),
+      y: Math.floor(Math.random() * canvas.height / gridSize)
+    };
+    
+    // 檢查新食物位置是否與蛇重疊
+    const overlap = snake.some(segment => segment.x === newFoodPosition.x && segment.y === newFoodPosition.y);
+    if (!overlap) {
+      break;
+    }
+  }
+  food = newFoodPosition;
 }
+
 
 function clearCanvas() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -125,6 +143,6 @@ document.addEventListener("keydown", keyDownHandler);
 canvas.addEventListener("touchstart", touchStartHandler);
 canvas.addEventListener("touchmove", touchMoveHandler);
 
-setInterval(update, 90);
+setInterval(update, 10);
 
 
