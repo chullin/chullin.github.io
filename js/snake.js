@@ -126,3 +126,23 @@ canvas.addEventListener("touchstart", touchStartHandler);
 canvas.addEventListener("touchmove", touchMoveHandler);
 
 setInterval(update, 90);
+
+
+
+// 關閉手機下拉更新的功能
+let touchStartY = 0;
+
+window.addEventListener("touchstart", function(event) {
+  if (event.touches.length === 1) {
+    touchStartY = event.touches[0].clientY;
+  }
+});
+
+window.addEventListener("touchmove", function(event) {
+  const touch = event.touches[0];
+  const touchMoveY = touch.clientY - touchStartY;
+  
+  if (touchMoveY > 0 && window.scrollY === 0) {
+    event.preventDefault();
+  }
+}, { passive: false });
