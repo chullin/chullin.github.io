@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
-const gridSize = 200;
+const gridSize = 20;
 let snake = [{ x: 10, y: 10 }];
 let food = { x: 15, y: 15 };
 let dx = 0;
@@ -150,4 +150,4 @@ document.addEventListener("keydown", keyDownHandler);
 canvas.addEventListener("touchstart", touchStartHandler);
 canvas.addEventListener("touchmove", touchMoveHandler);
 
-setInterval(update, 1000);
+setInterval(update, 100);
