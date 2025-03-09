@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
-const gridSize = 20;
+const gridSize = 200;
 let snake = [{ x: 10, y: 10 }];
 let food = { x: 15, y: 15 };
 let dx = 0;
