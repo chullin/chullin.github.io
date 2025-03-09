@@ -1,11 +1,8 @@
 // 在文檔載入完成後自動觸發模擬點擊按鈕
-document.addEventListener("DOMContentLoaded", function(event) {
+document.addEventListener("DOMContentLoaded", function (event) {
   // 觸發按鈕的動作
   document.getElementById("exampleModal1").click();
 });
-
-
-
 
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
@@ -24,7 +21,12 @@ function drawSnake() {
       // 蛇身顏色
       ctx.fillStyle = "green";
     }
-    ctx.fillRect(segment.x * gridSize, segment.y * gridSize, gridSize, gridSize);
+    ctx.fillRect(
+      segment.x * gridSize,
+      segment.y * gridSize,
+      gridSize,
+      gridSize
+    );
   });
 }
 function drawFood() {
@@ -59,24 +61,25 @@ function moveSnake() {
   }
 }
 
-
 function generateFood() {
   let newFoodPosition;
   while (true) {
     newFoodPosition = {
-      x: Math.floor(Math.random() * canvas.width / gridSize),
-      y: Math.floor(Math.random() * canvas.height / gridSize)
+      x: Math.floor((Math.random() * canvas.width) / gridSize),
+      y: Math.floor((Math.random() * canvas.height) / gridSize),
     };
-    
+
     // 檢查新食物位置是否與蛇重疊
-    const overlap = snake.some(segment => segment.x === newFoodPosition.x && segment.y === newFoodPosition.y);
+    const overlap = snake.some(
+      (segment) =>
+        segment.x === newFoodPosition.x && segment.y === newFoodPosition.y
+    );
     if (!overlap) {
       break;
     }
   }
   food = newFoodPosition;
 }
-
 
 function clearCanvas() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -121,18 +124,22 @@ function touchMoveHandler(event) {
   const dyTouch = touch.clientY - touchStartY;
 
   if (Math.abs(dxTouch) > Math.abs(dyTouch)) {
-    if (dxTouch > 0 && dx === 0) { // right swipe
+    if (dxTouch > 0 && dx === 0) {
+      // right swipe
       dx = 1;
       dy = 0;
-    } else if (dxTouch < 0 && dx === 0) { // left swipe
+    } else if (dxTouch < 0 && dx === 0) {
+      // left swipe
       dx = -1;
       dy = 0;
     }
   } else {
-    if (dyTouch > 0 && dy === 0) { // down swipe
+    if (dyTouch > 0 && dy === 0) {
+      // down swipe
       dx = 0;
       dy = 1;
-    } else if (dyTouch < 0 && dy === 0) { // up swipe
+    } else if (dyTouch < 0 && dy === 0) {
+      // up swipe
       dx = 0;
       dy = -1;
     }
@@ -143,6 +150,4 @@ document.addEventListener("keydown", keyDownHandler);
 canvas.addEventListener("touchstart", touchStartHandler);
 canvas.addEventListener("touchmove", touchMoveHandler);
 
-setInterval(update, 10);
-
-
+setInterval(update, 1000);
