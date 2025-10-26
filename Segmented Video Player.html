@@ -46,6 +46,17 @@
                 border-radius: 6px;
                 border: 1px solid #ddd;
             }
+
+            /* ✅ 新增 hover 效果 */
+            .playlist-item {
+                cursor: pointer;
+                color: #007bff;
+                text-decoration: underline;
+                margin-bottom: 6px;
+            }
+            .playlist-item:hover {
+                color: #0056b3;
+            }
         </style>
     </head>
     <body>
@@ -85,11 +96,21 @@
             </h3>
             <p>
                 <!-- 需引入 Bootstrap CSS -->
-            <ul class="list-unstyled">
-                <li>Shadow： https://chullin.github.io/video_segments/Shadow/playlist.m3u8</li>
-                <li>Dify： https://chullin.github.io/video_segments/Dify/Difyplaylist.m3u8</li>
-
-            </ul>
+                <ul class="list-unstyled">
+                    <!-- ✅ 新增 data-url 屬性 -->
+                    <li
+                        class="playlist-item"
+                        data-url="https://chullin.github.io/video_segments/Shadow/playlist.m3u8"
+                    >
+                        Shadow playlist.m3u8
+                    </li>
+                    <li
+                        class="playlist-item"
+                        data-url="https://chullin.github.io/video_segments/Dify/Difyplaylist.m3u8"
+                    >
+                        Dify playlist.m3u8
+                    </li>
+                </ul>
             </p>
             
         </div>
@@ -244,6 +265,17 @@
                     player.pause();
                 }
             });
+
+            // ✅ 新增：點擊影片清單自動載入播放
+            document.querySelectorAll(".playlist-item").forEach((item) => {
+                item.addEventListener("click", () => {
+                    const url = item.dataset.url;
+                    playlistInput.value = url;
+                    status(`已選擇影片：${item.textContent.trim()}`);
+                    start();
+                });
+            });
+
 
             // 自動啟動一次
             start();
