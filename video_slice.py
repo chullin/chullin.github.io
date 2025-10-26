@@ -2,7 +2,7 @@ import subprocess
 import os
 
 # 原始影片路徑
-input_path = r"./fullVideo/Dify_halfspeed.mp4"
+input_path = r"./fullVideo/Dify.mp4"
 
 # 輸出資料夾
 output_dir = r"./video_segments/Dify"
