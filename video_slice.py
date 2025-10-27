@@ -9,7 +9,7 @@ output_dir = r"./video_segments/Camera"
 os.makedirs(output_dir, exist_ok=True)
 
 # 每段影片秒數（可自行調整）
-segment_time = 10  # 每段 10 秒，可改成 5、15 等
+segment_time = 5  # 每段 10 秒，可改成 5、15 等
 
 # 輸出的 m3u8 清單檔路徑
 output_m3u8 = os.path.join(output_dir, "Cameraplaylist.m3u8")
