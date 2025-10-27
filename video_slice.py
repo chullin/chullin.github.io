@@ -2,17 +2,17 @@ import subprocess
 import os
 
 # 原始影片路徑
-input_path = r"./fullVideo/Dify.mp4"
+input_path = r"D:/Users/chullin/Desktop/Camera_review.mp4"
 
 # 輸出資料夾
-output_dir = r"./video_segments/Dify"
+output_dir = r"./video_segments/Camera"
 os.makedirs(output_dir, exist_ok=True)
 
 # 每段影片秒數（可自行調整）
 segment_time = 10  # 每段 10 秒，可改成 5、15 等
 
 # 輸出的 m3u8 清單檔路徑
-output_m3u8 = os.path.join(output_dir, "Difyplaylist.m3u8")
+output_m3u8 = os.path.join(output_dir, "Cameraplaylist.m3u8")
 
 # ffmpeg 命令
 # -codec copy：不重新壓縮，加快速度
